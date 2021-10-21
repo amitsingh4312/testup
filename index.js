@@ -1,6 +1,6 @@
 import http from 'http';
 
-const PORT = 2020 || process.env.PORT
+const PORT = process.env.PORT
 
 const ser = http.createServer((req, res, next)=>{
     if(req.url === "/"){
