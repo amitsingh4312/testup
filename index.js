@@ -1,7 +1,16 @@
 import http from 'http';
 
+const PORT = 2020 || process.env.PORT
+
 const ser = http.createServer((req, res, next)=>{
-    res.end("worki");
+    if(req.url === "/"){
+        res.end("worki");
+    }else{
+        res.end("Four Zero Four Not Found");
+    }
+    
 });
 
-ser.listen(2020,"localhost", );
+ser.listen(PORT, ()=>{
+    console.log('Server is Running');
+});
